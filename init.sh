@@ -27,12 +27,13 @@ sudo -u postgres psql -c "CREATE USER db_user WITH PASSWORD 'db_password';"
 sudo -u postgres psql -c "CREATE DATABASE db_database;"
 sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE db_database TO db_user";
 
-# Python 3.5 and pip. Devel package is necessary when using some packages
+# Python 3.5, pip and virtualenv. Devel package is necessary when using some packages
 yum -y install python35u python35u-devel python35u-pip
-
-# Virtualenv
 pip3.5 install virtualenv
+
+# Python basic packages
 su vagrant
 virtualenv venv
 source venv/bin/activate
+pip install psycopg2
 exit
