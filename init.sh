@@ -13,3 +13,10 @@ systemctl start nginx
 
 # Python 3.5 and pip. Devel package is necessary when using some packages
 yum -y install python35u python35u-devel python35u-pip
+
+# Virtualenv
+pip3.5 install virtualenv
+su vagrant
+virtualenv venv
+source venv/bin/activate
+exit
