@@ -1,6 +1,7 @@
 # epel is necessary for IUS repository and other packages (eg. nginx)
-# wget is used to grab things from web (eg. ius.rpm)
-yum -y install epel-release wget
+# wget is used to grab things from web (e.g. ius.rpm)
+# gcc is necessary to compile some libraries (e.g. python pyscopg2)
+yum -y install epel-release wget gcc
 
 # Image libraries (necessary for pillow)
 yum -y install libjpeg-devel zlib-devel libtiff-devel freetype-devel lcms2-devel openjpeg-devel
