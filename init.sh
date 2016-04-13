@@ -2,6 +2,9 @@
 # wget is used to grab things from web (eg. ius.rpm)
 yum -y install epel-release wget
 
+# Image libraries (necessary for pillow)
+yum -y install libjpeg-devel zlib-devel libtiff-devel freetype-devel lcms2-devel openjpeg-devel
+
 # IUS is necessary for Python 3.5.
 wget https://centos7.iuscommunity.org/ius-release.rpm -O /tmp/ius.rpm
 rpm -Uvh /tmp/ius.rpm
