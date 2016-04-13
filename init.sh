@@ -7,3 +7,4 @@ systemctl start nginx
 yum -y install wget
 wget https://centos7.iuscommunity.org/ius-release.rpm -O /tmp/ius.rpm
 rpm -Uvh /tmp/ius.rpm
+yum -y install python35u python35u-devel python35u-pip
