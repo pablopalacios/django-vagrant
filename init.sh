@@ -30,10 +30,3 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE db_database TO db_use
 # Python 3.5, pip and virtualenv. Devel package is necessary when using some packages
 yum -y install python35u python35u-devel python35u-pip
 pip3.5 install virtualenv
-
-# Python basic packages
-su vagrant
-virtualenv venv
-source venv/bin/activate
-pip install psycopg2
-exit
