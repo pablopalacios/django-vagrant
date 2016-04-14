@@ -7,8 +7,9 @@ Vagrant.configure(2) do |config|
   config.vm.network "forwarded_port", guest: 8000, host: 8000
 
   config.vm.synced_folder ".", "/home/vagrant/sync", disabled: true
-  config.vm.synced_folder ".", "/home/vagrant/project"
+  config.vm.synced_folder "./src", "/home/vagrant/src"
 
   config.vm.provision "init", type: "shell", path: "./vagrant/init.sh"
   config.vm.provision "python-modules", type: "shell", path: "./vagrant/python-modules.sh", privileged: false
+  config.vm.provision "django", type: "shell", path: "./vagrant/django.sh", privileged: false
 end
