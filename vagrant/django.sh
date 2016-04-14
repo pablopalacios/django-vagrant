@@ -12,6 +12,7 @@ echo "MEDIA_ROOT = os.path.join(BASE_DIR, '../media')" >> settings.py
 
 # configures locale directories
 echo -e "\nLOCALE_PATHS = [os.path.join(BASE_DIR, '../locale/')]" >> settings.py
+echo -e "\nFIXTURE_DIRS = [os.path.join(BASE_DIR, '../fixtures/')]" >> settings.py
 
 # configures database connection
 sed -i  "s/django.db.backends.sqlite3/django.db.backends.postgresql_psycopg2/" settings.py
