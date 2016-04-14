@@ -12,6 +12,7 @@ Vagrant.configure(2) do |config|
   config.vm.synced_folder "./static", "/home/vagrant/static"
 
   config.vm.provision "init", type: "shell", path: "./vagrant/init.sh"
+  config.vm.provision "database", type: "shell", path: "./vagrant/postgresql.sh"
   config.vm.provision "python-modules", type: "shell", path: "./vagrant/python-modules.sh", privileged: false
   config.vm.provision "django", type: "shell", path: "./vagrant/django.sh", privileged: false
 end
