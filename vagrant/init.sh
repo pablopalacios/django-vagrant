@@ -1,8 +1,3 @@
-# deletes empty files
-rm ~/fixtures/empty
-rm ~/locale/empty
-rm ~/src/empty
-
 # epel is necessary for IUS repository and other packages (eg. nginx)
 # wget is used to grab things from web (e.g. ius.rpm)
 # gcc is necessary to compile some libraries (e.g. python pyscopg2)
